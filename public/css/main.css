@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_960_720.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.btn {
+  margin-right: 1.4rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  background: #b3b3b3;
+  color: black;
+}
+
+.center {
+  text-align: center;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.note-list-container {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.notes--wrapper {
+  width: 35%;
+  background-color: #1d1c1c;
+  height: 60vh;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 6px;
+}
+
+.note-list-wrapper {
+  height: 80%;
+  overflow-y: auto;
+  position: relative;
+  z-index: 0;
+}
+
+.note-list-wrapper::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 70px;
+}
+
+.note-list-wrapper::-webkit-scrollbar-track {
+  background-color: rgb(33, 33, 33);
+  border-radius: 70px;
+}
+
+.note-list-wrapper::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3;
+  border-radius: 70px;
+}
+
+.note {
+  background-color: rgb(33, 33, 33);
+  padding: 0.1em 1.2rem;
+  color: white;
+  margin: 0.6rem 0;
+  cursor: pointer;
+}
+
+.note-active {
+  background-color: rgb(40, 40, 40);
+}
+
+.note:hover {
+  background-color: rgb(40, 40, 40);
+}
+
+.note-title {
+  font-weight: bolder;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}
+
+.note-date {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.timestamp-clock {
+  margin-right: 0.4rem;
+}
+
+.note-label {
+  margin-top: -0.8rem;
+  margin-left: 0.2rem;
+}
+
+.note-label p {
+  font-size: 0.8rem;
+  color: #b3b3b3;
+  display: flex;
+}
+
+.note-text {
+  margin-left: 0.6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0.5rem;
+  border: 1px solid #000000;
+}
+
+.note-list-action {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  margin-top: 0.2rem;
+}
+
+.note-list-action i {
+  color: #b3b3b3;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 650px) {
+  .notes--wrapper {
+    width: 90%;
+  }
+}
+
+/******************************** note modal **********************************/
+.note-modal-container {
+  background: rgba(22, 22, 22, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note-modal {
+  background: #1d1c1c;
+  width: 35%;
+  min-height: 70%;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  .note-modal {
+    width: 90%;
+  }
+}
+
+/*************************** read mode **********************/
+.read-note-modal {
+  display: flex;
+  flex-flow: column nowrap;
+  color: #b3b3b3;
+}
+
+.read-note-modal-header {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.read-note-modal-header__left {
+  color: #b3b3b3;
+  padding: 0.3rem;
+}
+
+.read-note-modal-header__left i {
+  margin: 0.3rem;
+  cursor: pointer;
+}
+
+.search-control {
+  border: none;
+  background-color: #b3b3b3;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  margin: 0.3rem;
+}
+
+.search-control:focus {
+  outline: none;
+}
+
+.read-note-modal-content {
+  flex-grow: 5;
+  padding: 1.2rem;
+}
+
+.read-modal-title {
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.read-note-modal-action {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+/*********** edit mode **********************/
+.edit-note-modal {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.edit-note-modal-header {
+  padding: 0 0.9rem;
+  color: #b3b3b3;
+}
+
+.edit-note-modal-header p {
+  font-weight: bolder;
+}
+
+.edit-note-modal-content {
+  flex-grow: 8;
+  padding: 0.5rem 1.2rem;
+}
+
+.edit-note-modal-content .form-label {
+  display: block;
+  color: #b3b3b3;
+}
+
+.edit-note-modal-content .form-group {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.edit-note-modal-content .form-control {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  height: 4vh;
+  background: #b3b3b3;
+}
+
+.edit-note-modal-content .form-control:focus {
+  outline: none;
+}
+
+.edit-note-modal-content .text-control {
+  width: 100%;
+  height: 25vh;
+  border-radius: 4px;
+  background: #b3b3b3;
+}
+
+.edit-note-modal-content .text-control:focus {
+  outline: none;
+}
+
+.edit-note-modal-action {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 0;
+}

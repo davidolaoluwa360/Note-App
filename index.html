@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note App</title>
+    <link
+      rel="stylesheet"
+      href="./public/css/main.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="note-list-container">
+      <div class="notes--wrapper">
+        <div class="note-list-wrapper">
+          <div class="note note-active">
+            <p class="note-title">Conservation is one of the best area</p>
+            <div class="note-label">
+              <p>
+                <span class="note-date">13:43</span>
+                <span class="note-text">International's invitation</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="note">
+            <p class="note-title">Conservation is one of the best area</p>
+            <div class="note-label">
+              <p>
+                <span class="note-date">13:43</span>
+                <span class="note-text">International's invitation</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="note">
+            <p class="note-title">Conservation is one of the best area</p>
+            <div class="note-label">
+              <p>
+                <span class="note-date">13:43</span>
+                <span class="note-text">International's invitation</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="note">
+            <p class="note-title">Conservation is one of the best area</p>
+            <div class="note-label">
+              <p>
+                <span class="note-date">13:43</span>
+                <span class="note-text">International's invitation</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="note">
+            <p class="note-title">Conservation is one of the best area</p>
+            <div class="note-label">
+              <p>
+                <span class="note-date">13:43</span>
+                <span class="note-text">International's invitation</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="note">
+            <p class="note-title">Conservation is one of the best area</p>
+            <div class="note-label">
+              <p>
+                <span class="note-date">13:43</span>
+                <span class="note-text">International's invitation</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="note">
+            <p class="note-title">Conservation is one of the best area</p>
+            <div class="note-label">
+              <p>
+                <span class="note-date">13:43</span>
+                <span class="note-text">International's invitation</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="note">
+            <p class="note-title">Conservation is one of the best area</p>
+            <div class="note-label">
+              <p>
+                <span class="note-date">13:43</span>
+                <span class="note-text">International's invitation</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="note-list-action">
+          <i class="fas fa-plus-circle" title="add note"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="note-modal-container d-none">
+      <!--************************* Read Mode Modal *************************************-->
+      <section class="read-note-modal note-modal d-none">
+        <div class="read-note-modal-header">
+          <div class="read-note-modal-header__left">
+            <i class="fas fa-edit" title="edit note"></i>
+            <i class="fas fa-trash-alt" title="delete note"></i>
+          </div>
+        </div>
+
+        <div class="read-note-modal-content">
+          <header>
+            <p class="center read-modal-title">
+              Conservation is one of the best area
+            </p>
+          </header>
+
+          <p class="read-modal-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+            maiores debitis nulla id? Cum amet rem voluptates cumque porro sint
+            nam ipsum velit laboriosam, earum perferendis officiis eveniet, eos
+            minus?. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Nam nihil dolores magnam non illo eum suscipit voluptate tenetur
+            earum voluptates ad quam ducimus explicabo illum, deleniti vitae.
+            Voluptatem, possimus vero.
+          </p>
+        </div>
+
+        <div class="read-note-modal-action">
+          <button class="btn note-read-close">Close</button>
+        </div>
+      </section>
+
+      <!--************************* Edit Mode Modal *************************************-->
+      <section class="edit-note-modal note-modal d-none">
+        <div class="edit-note-modal-header">
+          <p>Add Notes</p>
+        </div>
+        <div class="edit-note-modal-content">
+          <div class="form-group">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control note-input-title" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Description</label>
+            <textarea class="text-control note-input-description"></textarea>
+          </div>
+        </div>
+        <div class="edit-note-modal-action">
+          <button class="btn edit-close">Close</button>
+          <button class="btn edit-save">Save</button>
+          <button class="btn edit-update d-none">Update</button>
+        </div>
+      </section>
+    </section>
+  </body>
+  <script src="./public/js/main.js"></script>
+</html>
